@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-16 bg-slate-800 flex font-semibold items-center w-full justify-between"
+    class="h-16 bg-slate-800 flex text-slate-200 text-lg font-semibold items-center w-full justify-between"
   >
     <router-link
       :to="{ name: 'home' }"

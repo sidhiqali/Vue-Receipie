@@ -1,5 +1,9 @@
 <template>
-  <div class="cards">
+  <div class="cards flex flex-wrap gap-4">
+    <MealCard />
+    <MealCard />
+    <MealCard />
+    <MealCard />
     <MealCard />
     <MealCard />
     <MealCard />
@@ -9,6 +13,13 @@
 
 <script>
 import MealCard from "./MealCard.vue";
+
+export default {
+  name: 'Meals',
+  components: {
+    MealCard,
+  },
+};
 </script>
 
 <style></style>
