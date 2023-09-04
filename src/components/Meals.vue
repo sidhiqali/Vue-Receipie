@@ -1,25 +1,29 @@
 <template>
-  <div class="cards flex flex-wrap gap-4">
-    <MealCard />
-    <MealCard />
-    <MealCard />
-    <MealCard />
-    <MealCard />
-    <MealCard />
-    <MealCard />
-    <MealCard />
+  <div
+    class="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 place-items-center"
+  >
+    <MealCard
+      v-for="meal in meals"
+      :key="meal.idMeal"
+      :meal="meal"
+    />
+  </div>
+  <div
+    v-if="!meals"
+    class="text-3xl font-semibold text-center mt-28 text-slate-500"
+  >
+    No Meals Found !!!
   </div>
 </template>
 
-<script>
+<script setup>
 import MealCard from "./MealCard.vue";
-
-export default {
-  name: 'Meals',
-  components: {
-    MealCard,
+const { meals } = defineProps({
+  meals: {
+    required: true,
+    type: Array,
   },
-};
+});
 </script>
 
 <style></style>

@@ -14,12 +14,12 @@ const router = createRouter({
           component: Home,
         },
         {
-          path: "/by-name",
+          path: "/by-name/:name?",
           name: "byname",
           component: () => import("../views/Search.vue"),
         },
         {
-          path: "/by-letter",
+          path: "/by-letter/:letter?",
           name: "byletter",
           component: () => import("../views/Letter.vue"),
         },
@@ -29,13 +29,13 @@ const router = createRouter({
           component: () => import("../views/incredients.vue"),
         },
         {
-          path: "/by-incredient/:name",
-          name: "byincredient",
+          path: "/by-incredient/:ingredient",
+          name: "byIngredient",
           component: () => import("../views/ByIncredient.vue"),
         },
         {
           path: "/meal/:id",
-          name: "mealDetail",
+          name: "mealDetails",
           component: () => import("../views/Meal.vue"),
         },
       ],
