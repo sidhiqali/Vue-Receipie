@@ -49,7 +49,7 @@ const { meal } = defineProps({
   },
 });
 
-// Define a local filter as a computed property
+
 const truncateWords = computed(() => (value, words) => {
   if (value) {
     const wordsArray = value.split(" ");
