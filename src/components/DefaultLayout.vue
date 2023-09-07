@@ -1,7 +1,7 @@
 <template>
     <navbar />
     <main>
-      <div class="max-w-[1200px] mx-auto">
+      <div class="mx-10 md:mx-20">
         <router-view />
       </div>
     </main>
