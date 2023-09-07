@@ -17,7 +17,7 @@
 <script>
 import Meals from '../components/Meals.vue';
 export default {
-  name: 'byLetters',
+  name: 'byLetter',
   components: { Meals },
   setup() {
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
